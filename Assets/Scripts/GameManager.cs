@@ -25,13 +25,12 @@ public class GameManager : MonoBehaviour
     public AudioClip soundtrack;
 
     private AudioSource _audioSource;
-  //  public GameObject replayBtn;
+  
     Coroutine spawnPipesCoroutine;
     void Start()
     {
         score = 0;
         scoreText.text = score.ToString();
-      //  replayBtn.SetActive(false);
         startMessage.SetActive(true);
         scoreLbl.SetActive(false);
         player.SetActive(false);
@@ -65,7 +64,6 @@ public class GameManager : MonoBehaviour
         startMessage.SetActive(false);
         player.SetActive(true);
         scoreLbl.SetActive(true);
-        //ps.StartSpawnCoroutine();
         spawnPipesCoroutine = StartCoroutine(ps.SpawnPipes());
     }
 
@@ -101,7 +99,6 @@ public class GameManager : MonoBehaviour
         
         finalScoreText.text = score.ToString();
         bestScoreText.text = bestScore.ToString();
-     //   replayBtn.SetActive(true);
         
     }
 

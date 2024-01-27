@@ -52,7 +52,6 @@ public class PipeSpawner : MonoBehaviour
 
     public void StartSpawnCoroutine()
     {
-        // Comenzamos a instanciar tuberías
         StartCoroutine(SpawnPipes());
     }
 
